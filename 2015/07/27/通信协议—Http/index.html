@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>rabbitMQ多次创建相同队列，如何保证立即显示最新消息 | xuty&#39;s Blog</title>
+    <title>通信协议—Http | xuty&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="tianyuanisme">
     
 
     
-    <meta name="description" content="之前我一直纠结如何做到消费者客户端再次创建队列的时候，不要显示他错过的那些数据。我之前的做法是在客户端断开连接的时候，删除队列，一般情况下是可以满足的，但是有时一些异常的情况会导致手动删除队列的代码没有执行。我到今天才找到真正的解决方案，就是 channel.queueDeclare在声明时有一个参数叫isExclusive，也就是排他性，当设置为true时，客户端关闭后rabbitmq会自动删除">
+    <meta name="description" content="一篇把Http协议的请求、响应参数讲的比较透彻的文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rabbitMQ多次创建相同队列，如何保证立即显示最新消息">
-<meta property="og:url" content="http://yoursite.com/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/index.html">
+<meta property="og:title" content="通信协议—Http">
+<meta property="og:url" content="http://yoursite.com/2015/07/27/通信协议—Http/index.html">
 <meta property="og:site_name" content="xuty's Blog">
-<meta property="og:description" content="之前我一直纠结如何做到消费者客户端再次创建队列的时候，不要显示他错过的那些数据。我之前的做法是在客户端断开连接的时候，删除队列，一般情况下是可以满足的，但是有时一些异常的情况会导致手动删除队列的代码没有执行。我到今天才找到真正的解决方案，就是 channel.queueDeclare在声明时有一个参数叫isExclusive，也就是排他性，当设置为true时，客户端关闭后rabbitmq会自动删除">
-<meta property="og:updated_time" content="2015-07-23T07:42:01.596Z">
+<meta property="og:description" content="一篇把Http协议的请求、响应参数讲的比较透彻的文章">
+<meta property="og:updated_time" content="2015-07-27T11:58:37.591Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="rabbitMQ多次创建相同队列，如何保证立即显示最新消息">
-<meta name="twitter:description" content="之前我一直纠结如何做到消费者客户端再次创建队列的时候，不要显示他错过的那些数据。我之前的做法是在客户端断开连接的时候，删除队列，一般情况下是可以满足的，但是有时一些异常的情况会导致手动删除队列的代码没有执行。我到今天才找到真正的解决方案，就是 channel.queueDeclare在声明时有一个参数叫isExclusive，也就是排他性，当设置为true时，客户端关闭后rabbitmq会自动删除">
+<meta name="twitter:title" content="通信协议—Http">
+<meta name="twitter:description" content="一篇把Http协议的请求、响应参数讲的比较透彻的文章">
 
     
     <link rel="alternative" href="/atom.xml" title="xuty&#39;s Blog" type="application/atom+xml">
@@ -80,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/" title="rabbitMQ多次创建相同队列，如何保证立即显示最新消息" itemprop="url">rabbitMQ多次创建相同队列，如何保证立即显示最新消息</a>
+      <a href="/2015/07/27/通信协议—Http/" title="通信协议—Http" itemprop="url">通信协议—Http</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="tianyuanisme" target="_blank" itemprop="author">tianyuanisme</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-23T07:28:35.000Z" itemprop="datePublished"> 发表于 2015-07-23</time>
+    <time datetime="2015-07-27T11:58:23.000Z" itemprop="datePublished"> 发表于 2015-07-27</time>
     
   </p>
 </header>
@@ -100,12 +100,16 @@
 		
 		</div>
 		
-		<p>之前我一直纠结如何做到消费者客户端再次创建队列的时候，不要显示他错过的那些数据。我之前的做法是在客户端断开连接的时候，删除队列，一般情况下是可以满足的，但是有时一些异常的情况会导致手动删除队列的代码没有执行。我到今天才找到真正的解决方案，就是 channel.queueDeclare在声明时有一个参数叫isExclusive，也就是排他性，当设置为true时，客户端关闭后rabbitmq会自动删除队列！</p>
-<p>为什么排他性有这个功能呢，我的理解是，排他性的作用就是为了让一个队列仅给一个客户端享用，它的功能除了客户端断开自动删除，还有个功能是不允许创建同名队列。所以客户端都断开了，队列留着也没用，所以rabbitmq就把它删除了。</p>
+		<p><a href="http://www.cnblogs.com/xhwy/archive/2012/03/03/2378293.html&quot;通信协议—Http&quot;" target="_blank" rel="external">一篇把Http协议的请求、响应参数讲的比较透彻的文章</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/通信协议/">通信协议</a>
+</div>
 
 
 </div>
@@ -114,7 +118,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/" data-title="rabbitMQ多次创建相同队列，如何保证立即显示最新消息 | xuty&#39;s Blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/07/27/通信协议—Http/" data-title="通信协议—Http | xuty&#39;s Blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -127,19 +131,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/27/通信协议—Http/" title="通信协议—Http">
-  <strong>上一篇：</strong><br/>
-  <span>
-  通信协议—Http</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/07/17/我的第一篇没有用的博客/"  title="我的第一篇没有用的博客">
+<a href="/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/"  title="rabbitMQ多次创建相同队列，如何保证立即显示最新消息">
  <strong>下一篇：</strong><br/> 
- <span>我的第一篇没有用的博客
+ <span>rabbitMQ多次创建相同队列，如何保证立即显示最新消息
 </span>
 </a>
 </div>
