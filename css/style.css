@@ -403,17 +403,17 @@ body >header a {
 }
 #imglogo {
   float: left;
-  width: 4em;
-  height: 4em;
+  width: 8em;
+  height: 3em;
 }
 @media only screen and (min-width: 768px) {
   #imglogo {
-    width: 5em;
+    width: 9em;
   }
 }
 @media only screen and (min-width: 1024px) {
   #imglogo {
-    width: 5.5em;
+    width: 9.5em;
   }
 }
 #imglogo img {
