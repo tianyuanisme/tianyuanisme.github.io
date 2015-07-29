@@ -402,7 +402,7 @@ body >header a {
   color: #fff;
 }
 #imglogo {
-  float: left;
+  float: right;
   width: 8em;
   height: 3em;
 }
