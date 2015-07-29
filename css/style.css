@@ -402,9 +402,9 @@ body >header a {
   color: #fff;
 }
 #imglogo {
-  float: right;
+  float: left;
   width: 8em;
-  height: 3em;
+  height: 5em;
 }
 @media only screen and (min-width: 768px) {
   #imglogo {
