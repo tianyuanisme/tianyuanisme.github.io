@@ -65,10 +65,20 @@
 					
 					<li>
  					
-						<form class="search" accept-charset="utf-8">
+						<form class="search" action="" method="get" accept-charset="utf-8" onsubmit="doSubmit()">
 						<label>Search</label>
 						<input type="text" id="st-default-search-input" maxlength="20" placeholder="Search" />
 						</form>
+						<script>
+						function doSubmit(){
+							var form = event.target;
+							var query = document.getElementById("st-default-search-input").value;
+							var baseUrl = window.location.href;
+							baseUrl = baseUrl.substring(0, baseUrl.indexOf("#"));
+							form.action = baseUrl + "#stq=" + query + "&stp=1";
+							form.submit();
+						}
+						</script>			
 					
 					</li>
 				</ul>

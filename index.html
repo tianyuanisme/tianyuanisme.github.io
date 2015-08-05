@@ -63,10 +63,20 @@
 					
 					<li>
  					
-						<form class="search" accept-charset="utf-8">
+						<form class="search" action="" method="get" accept-charset="utf-8" onsubmit="doSubmit()">
 						<label>Search</label>
 						<input type="text" id="st-default-search-input" maxlength="20" placeholder="Search" />
 						</form>
+						<script>
+						function doSubmit(){
+							var form = event.target;
+							var query = document.getElementById("st-default-search-input").value;
+							var baseUrl = window.location.href;
+							baseUrl = baseUrl.substring(0, baseUrl.indexOf("#"));
+							form.action = baseUrl + "#stq=" + query + "&stp=1";
+							form.submit();
+						}
+						</script>			
 					
 					</li>
 				</ul>
@@ -75,6 +85,61 @@
     </header>
     <div id="container">
       <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/05/创建动态矢量地图/" title="创建动态矢量地图" itemprop="url">创建动态矢量地图</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="iSuperMap" target="_blank" itemprop="author">iSuperMap</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-05T06:54:43.000Z" itemprop="datePublished"> 发表于 2015-08-05</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>动态矢量地图是可以按照时间序列，动态展示空间信息的地图。效果图如下：<br>![效果图]（/img/创建动态矢量地图/效果图.png）</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/教程/">教程</a>
+</div>
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
 
    
     
@@ -316,6 +381,10 @@
 		
 		  
 			<li><a href="/categories/No-Use/" title="No Use">No Use<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
 		  
 		
 		  

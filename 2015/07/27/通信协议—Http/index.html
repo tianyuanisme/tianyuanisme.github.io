@@ -64,10 +64,20 @@
 					
 					<li>
  					
-						<form class="search" accept-charset="utf-8">
+						<form class="search" action="" method="get" accept-charset="utf-8" onsubmit="doSubmit()">
 						<label>Search</label>
 						<input type="text" id="st-default-search-input" maxlength="20" placeholder="Search" />
 						</form>
+						<script>
+						function doSubmit(){
+							var form = event.target;
+							var query = document.getElementById("st-default-search-input").value;
+							var baseUrl = window.location.href;
+							baseUrl = baseUrl.substring(0, baseUrl.indexOf("#"));
+							form.action = baseUrl + "#stq=" + query + "&stp=1";
+							form.submit();
+						}
+						</script>			
 					
 					</li>
 				</ul>
@@ -132,6 +142,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2015/08/05/创建动态矢量地图/" title="创建动态矢量地图">
+  <strong>上一篇：</strong><br/>
+  <span>
+  创建动态矢量地图</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/"  title="rabbitMQ多次创建相同队列，如何保证立即显示最新消息">
@@ -166,6 +184,10 @@
 		
 		  
 			<li><a href="/categories/No-Use/" title="No Use">No Use<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
 		  
 		
 		  
