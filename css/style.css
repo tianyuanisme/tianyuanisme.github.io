@@ -374,7 +374,7 @@ input[type="search"]::-webkit-search-decoration {
   }
 }
 body >header {
-  width: 100%;
+  width: 50%;
   -webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   background: url("../") center #0083cb;
@@ -387,7 +387,7 @@ body >header {
   }
 }
 body >header >div {
-  width: 65%;
+  width: 35%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
