@@ -105,9 +105,23 @@
 </header>
     <div class="article-content">
         
-        <p>动态矢量地图是可以按照时间序列，动态展示空间信息的地图。效果图如下：<br><img src="/img/创建动态矢量地图/效果图.png" alt="效果图" title="test"></p>
+        <p>动态矢量地图是可以按照时间序列，动态展示空间信息的地图。效果图如下：<br><img src="/img/创建动态矢量地图/效果图.png" alt="效果图"></p>
 <p>操作步骤：</p>
-<h2 id="添加动态矢量图层">添加动态矢量图层</h2><p>在MapViewer页面，依次选择图层管理器—添加矢量图层—动态矢量图层，即可添加一个动态矢量图层。一副地图中只能包含一个动态矢量图层，且在同一个动态图层中添加多个要素集时，其要素字段、时间字段是统一的。<br><img src="/img/创建动态矢量地图/图层管理-添加矢量图层.png" alt="添加矢量图层"><br><img src="/img/创建动态矢量地图/添加矢量图层-动态矢量图层.png" alt="动态矢量图层"><br>配置参数的说明如下：<br>+数据来源: 当前默认为”SuperMap REST数据服务”<br>+服务地址: 输入REST服务地址，格式要求为”http://<server>:<port>/iserver/services/{component}/rest/data”<br>       eg：<a href="http://support.supermap.com.cn:8090/iserver/services/data-DynamicData/rest/data" target="_blank" rel="external">http://support.supermap.com.cn:8090/iserver/services/data-DynamicData/rest/data</a><br>+数据源: REST服务中所有可用的数据源列表<br>+数据集: 所选数据源包含的所有数据集<br>+要素字段: 所选数据集包含的所有要素字段，选中后不可更改，且添加其他要素集时，都需要使用该要素字段<br>+时间字段: 所选数据集包含的时间字段，选中后不可更改，且添加其他要素集时，都需要使用该时间字段<br>+时间范围: 选择要素集显示的时间范围<br>+图层类型: 图层类型包括常规和扩展矢量要素图层，扩展矢量要素图层可选两种渲染类型<br>+渲染类型: 当图层类型选择扩展矢量要素图层后，如果是点要素，则可选择”闪烁点”、”点发射”两种渲染类型；如果是线要素，则可选择”线伸缩”渲染类型<br>+数据字段：选择”点发射”渲染类型后，需要指定数据字段，来生成等级专题图，根据数据字段自动渲染要素的大小与颜色<br>+图层名称： 定义图层的名称</port></server></p>
+<h2 id="添加动态矢量图层">添加动态矢量图层</h2><p>在MapViewer页面，依次选择图层管理器—添加矢量图层—动态矢量图层，即可添加一个动态矢量图层。一副地图中只能包含一个动态矢量图层，且在同一个动态图层中添加多个要素集时，其要素字段、时间字段是统一的。<br><img src="/img/创建动态矢量地图/图层管理-添加矢量图层.png" alt="添加矢量图层"><br><img src="/img/创建动态矢量地图/添加矢量图层-动态矢量图层.png" alt="动态矢量图层"><br>配置参数的说明如下：</p>
+<ul>
+<li>数据来源: 当前默认为”SuperMap REST数据服务”</li>
+<li>服务地址: 输入REST服务地址，格式要求为”http://<server>:<port>/iserver/services/{component}/rest/data”<pre><code><span class="title">eg</span>：http://support.supermap.com.cn:<span class="number">8090</span>/iserver/services/<span class="typedef"><span class="keyword">data</span>-<span class="type">DynamicData</span>/rest/<span class="keyword">data</span></span>
+</code></pre></port></server></li>
+<li>数据源: REST服务中所有可用的数据源列表</li>
+<li>数据集: 所选数据源包含的所有数据集</li>
+<li>要素字段: 所选数据集包含的所有要素字段，选中后不可更改，且添加其他要素集时，都需要使用该要素字段</li>
+<li>时间字段: 所选数据集包含的时间字段，选中后不可更改，且添加其他要素集时，都需要使用该时间字段</li>
+<li>时间范围: 选择要素集显示的时间范围</li>
+<li>图层类型: 图层类型包括常规和扩展矢量要素图层，扩展矢量要素图层可选两种渲染类型</li>
+<li>渲染类型: 当图层类型选择扩展矢量要素图层后，如果是点要素，则可选择”闪烁点”、”点发射”两种渲染类型；如果是线要素，则可选择”线伸缩”渲染类型</li>
+<li>数据字段：选择”点发射”渲染类型后，需要指定数据字段，来生成等级专题图，根据数据字段自动渲染要素的大小与颜色</li>
+<li>图层名称： 定义图层的名称</li>
+</ul>
 <h2 id="添加多个数据集：">添加多个数据集：</h2><p><img src="/img/创建动态矢量地图/添加多个数据集.png" alt="添加多个数据集"></p>
 <h2 id="配置要素样式">配置要素样式</h2><p><img src="/img/创建动态矢量地图/配置要素样式.png" alt="配置要素样式"><br>点击图上按钮，设置要素样式。多选图层可以统一设置要素风格。</p>
 
