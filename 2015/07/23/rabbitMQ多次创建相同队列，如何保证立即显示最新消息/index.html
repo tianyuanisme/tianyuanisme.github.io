@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>rabbitMQ多次创建相同队列，如何保证立即显示最新消息 | iSuperMap帮助</title>
+    <title>rabbitMQ多次创建相同队列，如何保证立即显示最新消息 | 博客小站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="iSuperMap">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="rabbitMQ多次创建相同队列，如何保证立即显示最新消息">
 <meta property="og:url" content="http://yoursite.com/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/index.html">
-<meta property="og:site_name" content="iSuperMap帮助">
+<meta property="og:site_name" content="博客小站">
 <meta property="og:description" content="之前我一直纠结如何做到消费者客户端再次创建队列的时候，不要显示他错过的那些数据。我之前的做法是在客户端断开连接的时候，删除队列，一般情况下是可以满足的，但是有时一些异常的情况会导致手动删除队列的代码没有执行。我到今天才找到真正的解决方案，就是 channel.queueDeclare在声明时有一个参数叫isExclusive，也就是排他性，当设置为true时，客户端关闭后rabbitmq会自动删除">
 <meta property="og:updated_time" content="2015-07-23T07:42:01.596Z">
 <meta name="twitter:card" content="summary">
@@ -23,7 +23,7 @@
 <meta name="twitter:description" content="之前我一直纠结如何做到消费者客户端再次创建队列的时候，不要显示他错过的那些数据。我之前的做法是在客户端断开连接的时候，删除队列，一般情况下是可以满足的，但是有时一些异常的情况会导致手动删除队列的代码没有执行。我到今天才找到真正的解决方案，就是 channel.queueDeclare在声明时有一个参数叫isExclusive，也就是排他性，当设置为true时，客户端关闭后rabbitmq会自动删除">
 
     
-    <link rel="alternative" href="/atom.xml" title="iSuperMap帮助" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="博客小站" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/iSuperMapLogo.ico">
@@ -41,11 +41,11 @@
 <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="iSuperMap帮助" title="iSuperMap帮助"/></a>
+				<a href="http://www.isupermap.com"><img src="/img/logo.png" alt="博客小站" title="博客小站"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="iSuperMap帮助">iSuperMap帮助</a></h1>
+				<h1 class="site-name"><a href="/" title="博客小站">博客小站</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
@@ -125,7 +125,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/" data-title="rabbitMQ多次创建相同队列，如何保证立即显示最新消息 | iSuperMap帮助" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/07/23/rabbitMQ多次创建相同队列，如何保证立即显示最新消息/" data-title="rabbitMQ多次创建相同队列，如何保证立即显示最新消息 | 博客小站" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
