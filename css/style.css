@@ -379,7 +379,7 @@ body >header {
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   background: url("../") center #0083cb;
   color: #fff;
-  padding: 0.1em 0 0.4em;
+  padding: 0.1em 1em 0.4em;
 }
 @media only screen and (min-width: 1024px) {
   body >header {
