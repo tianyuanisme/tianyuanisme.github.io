@@ -535,7 +535,7 @@ header nav ul li a:hover {
   color: #e9cd4c;
 }
 .shownav {
-  max-height: 10em;
+  max-height: 40em;
 }
 .search {
   padding: 0.1em 0 0 1em;
