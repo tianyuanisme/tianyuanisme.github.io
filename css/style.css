@@ -394,7 +394,7 @@ body >header >div {
 }
 @media only screen and (min-width: 1024px) {
   body >header >div {
-    width: 93%;
+    width: 82%;
   }
 }
 body >header a {
