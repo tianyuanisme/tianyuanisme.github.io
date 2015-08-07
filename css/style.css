@@ -374,12 +374,12 @@ input[type="search"]::-webkit-search-decoration {
   }
 }
 body >header {
-  width: 50%;
+  width: 100%;
   -webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   background: url("../") center #0083cb;
   color: #fff;
-  padding: 0.1em 2em 0.4em;
+  padding: 0.1em 5em 0.4em;
 }
 @media only screen and (min-width: 1024px) {
   body >header {
